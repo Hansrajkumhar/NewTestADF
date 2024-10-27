@@ -1,0 +1,19 @@
+{
+	"name": "InputBinaryFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OneLinkedServiceForBoth",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "emp1.txt",
+				"container": "input"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

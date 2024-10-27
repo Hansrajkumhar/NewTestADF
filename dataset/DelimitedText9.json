@@ -1,0 +1,48 @@
+{
+	"name": "DelimitedText9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage19",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "call_date",
+				"type": "String"
+			},
+			{
+				"name": "direction",
+				"type": "String"
+			},
+			{
+				"name": "call_status",
+				"type": "String"
+			},
+			{
+				"name": "departmentline",
+				"type": "String"
+			},
+			{
+				"name": "missed_agent",
+				"type": "String"
+			},
+			{
+				"name": "call_id",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

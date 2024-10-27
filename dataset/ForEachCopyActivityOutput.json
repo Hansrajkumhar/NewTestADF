@@ -1,0 +1,48 @@
+{
+	"name": "ForEachCopyActivityOutput",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage18",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "call_date",
+				"type": "String"
+			},
+			{
+				"name": "direction",
+				"type": "String"
+			},
+			{
+				"name": "call_status",
+				"type": "String"
+			},
+			{
+				"name": "departmentline",
+				"type": "String"
+			},
+			{
+				"name": "missed_agent",
+				"type": "String"
+			},
+			{
+				"name": "call_id",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

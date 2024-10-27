@@ -1,0 +1,25 @@
+{
+	"name": "AzureSqlTable5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase8",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"dbname": {
+				"type": "String"
+			},
+			"tablename": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employee1"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

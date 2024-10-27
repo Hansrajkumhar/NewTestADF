@@ -1,0 +1,44 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "call_date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "direction",
+				"type": "nvarchar"
+			},
+			{
+				"name": "call_status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "departmentline",
+				"type": "nvarchar"
+			},
+			{
+				"name": "missed_agent",
+				"type": "nvarchar"
+			},
+			{
+				"name": "call_id",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "CALL_DETAILS"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

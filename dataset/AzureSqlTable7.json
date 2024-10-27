@@ -1,0 +1,38 @@
+{
+	"name": "AzureSqlTable7",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase10",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Emp_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Employee_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Email_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "atten_Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Status",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tattendance"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

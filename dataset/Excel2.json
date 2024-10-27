@@ -1,0 +1,35 @@
+{
+	"name": "Excel2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage12",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "General",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "zohoAttendance.xlsx",
+				"container": "input"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "Emp_ID",
+				"type": "String"
+			},
+			{
+				"name": "Employee_Name",
+				"type": "String"
+			},
+			{
+				"name": "Team",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
