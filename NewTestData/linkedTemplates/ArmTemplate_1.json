@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "NewTestData"
 		},
+		"AzureBlobStorage6_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage6'"
+		},
 		"AzureBlobStorage7_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage7'"
@@ -82,10 +86,6 @@
 		"ForEachCopyActivity_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ForEachCopyActivity'"
-		},
-		"GetMetaDataService_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'GetMetaDataService'"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
@@ -248,6 +248,19 @@
 		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
 	},
 	"resources": [
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage6')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "AzureBlobStorage",
+				"typeProperties": {
+					"connectionString": "[parameters('AzureBlobStorage6_connectionString')]"
+				}
+			},
+			"dependsOn": []
+		},
 		{
 			"name": "[concat(parameters('factoryName'), '/AzureBlobStorage7')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
@@ -608,19 +621,6 @@
 				"type": "AzureBlobStorage",
 				"typeProperties": {
 					"connectionString": "[parameters('ForEachCopyActivity_connectionString')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/GetMetaDataService')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureBlobStorage",
-				"typeProperties": {
-					"connectionString": "[parameters('GetMetaDataService_connectionString')]"
 				}
 			},
 			"dependsOn": []

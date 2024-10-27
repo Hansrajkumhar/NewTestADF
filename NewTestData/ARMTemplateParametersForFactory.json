@@ -50,6 +50,9 @@
 		"AzureBlobStorage22_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStorage23_connectionString": {
+			"value": ""
+		},
 		"AzureBlobStorage3_connectionString": {
 			"value": ""
 		},
